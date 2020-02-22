@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    transition: 250ms;
 }
 
 header {
@@ -27,7 +28,9 @@ h1 {
     text-transform: uppercase;
     font-size: 25px;
     letter-spacing: -0.1px;
+    cursor: pointer;
 }
+
 
 ul li {
     list-style: none;
@@ -49,3 +52,47 @@ li a {
     font-size: 12px;
     letter-spacing: 0.1px;
 }
+
+a:hover{
+    color: #f06c64;
+}
+
+.slider {
+    height: 600px;
+    background-color: #f06c64;
+    border-bottom: 5px solid #ea676b;
+}
+
+.slider-box{
+    height: 536px;
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 53px;
+    display: flex;
+}
+
+.Horizontal{
+    padding-left: 74px;
+    padding-top: 121px;
+}
+
+.chev{
+    background-image: url("./assets/chev.png");
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(228px) translateX(-70px);
+    width: 16px;
+    height: 27px;
+    
+}
+
+.chev2 {
+    background-image: url("./assets/chev2.png");
+    position: absolute;
+    transform: translateY(108px) translateX(539px);
+    width: 16px;
+    height: 27px;
+    cursor: pointer;
+}
+  
+
