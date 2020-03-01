@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    transition: 250ms;
+}
+
+.container {
+    width: 1020px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.portfolio{
+    width: 100%;
+    height: 870px;
+    background-color: #2d303a;
+    border-bottom: 5px solid #323746;
+    padding-top: 60px;
+}
+
+.portfolio-text h2{
+    color:#767e9e;
+    font-size: 30px;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.39px;
+}
+
+.portfolio-text p{
+    margin-top: 19px;
+    width: 940px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.20px;
+    color: #767e9e;
+    font-family: 'Lato-Light';
+}
+
+.portfolio-text ul{
+list-style: none;
+margin-top: 12px;
+}
+
+.portfolio-text li{
+    margin-right: 10px;
+    padding: 4px 5px;
+    display: inline;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    line-height: 18px;
+    color: rgb(118, 126, 158);
+    font-family: Lato-Light;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(118, 126, 158);
+}
+
+.portfolio-text li:hover{
+color: #dedede;
+border-color: #dedede;
+cursor: pointer;
+}
+
+.flexbox{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.element {
+    margin-top: 20px;   
+    width: 220px;
+    height: 187px;
+}
+.element:nth-child(n+13){
+    display:none;
+ }
+
+ .About-us{
+    padding-top: 60px;
+    height: 734px;
+    background-color: #f2f2f2;
+ }
+
+ .about-us-box{
+     margin-top: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+
+ .item {
+     height: 444px;
+     width: 300px;
+ }
+
+ .item h2 {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato-Bold";
+    font-weight: 900;
+    margin-top: 13px;
+ }
+
+ .item p{
+    margin-top: 11px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+ }
+
+ .social {
+     margin-top: 23px;
+ }
+ .social img{
+    margin-right: 4px;
+}
