@@ -282,6 +282,9 @@ cursor: pointer;
  .social img{
     margin-right: 4px;
 }
+.social img:hover{
+    cursor: pointer;
+}
 
 .quote{
     width: 100%;
