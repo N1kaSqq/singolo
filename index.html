@@ -17,41 +17,78 @@
                         <h1>Singolo<span style="color:#f06c64;">*</span></h1>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a id="contactLink" class="alist " href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a id="aboutLink" class="alist " href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#">Portfolio</a>
+                        <a id="portfolioLink" class="alist " href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a id="servicesLink" class="alist " href="#services">Services</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a id="homeLink" class="alist active2" href="#slider">Home</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="slider">
-        <div class="slider-box">
-            <div class="slider-element Vertical">
-                <div class="chev">
-                
-                </div>
-                <img src="./assets/iPhone-Vertical.png" alt="">
+    <section class="slider" id="slider">
+        <div class="chev-box">
+            <div class="chev chev1">
+                <img src="./assets/chev.png" alt="">
             </div>
-            <div class="slider-element Horizontal">
-                <div class="chev2">
-                
-                </div>
-                <img src="./assets/iPhone-Horizontal.png" alt="">
+            <div class="chev chev2">
+                <img src="./assets/chev2.png" alt="">
             </div>
         </div>
+        <div class="items-container">
+            <div class="item active">
+                <div class="slider-box">
+                    <div class="slider-element Vertical">
+                        <div class="off-screen-Vertical off-screen">
+    
+                        </div>
+                        <div class="Home-button-Vertical Home-button">
+                            
+                        </div>
+                        <img src="./assets/iPhone-Vertical.png" alt="">
+                    </div>
+                    <div class="slider-element Horizontal">
+                        <div class="off-screen-Horizontal off-screen">
+                            
+                        </div>
+                        <div class="Home-button-Horizontal Home-button">
+                            
+                        </div>
+                        <img src="./assets/iPhone-Horizontal.png" alt="">
+                    </div>
+                </div>     
+        </div>
+        <div class="item">          
+            <div class="slider-box2">
+                <div class="slider2-iPhone-Vertical">
+                    <div class="off-screen-slider2 off-screen">
+                        
+                    </div>
+                    <div class="Home-button-slider2 Home-button">
+                        
+                    </div>
+                    <img src="./assets/slider2-iPhone-Vertical.png" alt="">
+                </div>
+                <div class="slider2-iPhone-mini-left">
+                    <img src="./assets/slider2-iPhone-mini.png" alt="">
+                </div>
+                <div class="slider2-iPhone-mini-right">
+                    <img src="./assets/slider2-iPhone-mini.png" alt="">
+                </div>
+            </div>
+        </div> 
+        </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <div class="services-info">
                 <h2>Our Services</h2>
@@ -139,7 +176,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="portfolio-text">
                 <h2>
@@ -149,16 +186,16 @@
                     Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                 </p>
                 <ul>
-                    <li>
+                    <li class="portfolio-list active-portfolio">
                         All
                     </li>
-                    <li>
+                    <li class="portfolio-list">
                         Web Design
                     </li>
-                    <li>
+                    <li class="portfolio-list">
                         Graphic Design
                     </li>
-                    <li>
+                    <li class="portfolio-list">
                         Artwork
                     </li>
                 </ul>
@@ -203,7 +240,7 @@
             </div>
         </div>
     </section>
-    <section class="About-us">
+    <section class="About-us" id="about">
         <div class="container">
             <div class="portfolio-text">
                 
@@ -215,7 +252,7 @@
                     </p>
             </div>
             <div class="about-us-box">
-                <div class="item">
+                <div class="item2">
                     <img src="./assets/Aboutus1.png" alt="">
                     <h2>
                         Adam Jensen
@@ -230,7 +267,7 @@
                         <img src="./assets/LinkedIn.png" alt="">
                     </div>
                 </div>
-                <div class="item">
+                <div class="item2">
                     <img src="./assets/Aboutus2.png" alt="">
                     <h2>
                         Desmond Miles
@@ -245,7 +282,7 @@
                         <img src="./assets/LinkedIn.png" alt="">
                     </div>
                 </div>
-                <div class="item">
+                <div class="item2">
                     <img src="./assets/Aboutus3.png" alt="">
                     <h2>
                         Scolara Visari
@@ -264,7 +301,7 @@
             </div>
         </div>    
     </section>
-    <section class="quote">
+    <section class="quote" id="contact">
         <div class="container">
             <h2>
                 Get a Quote
@@ -273,12 +310,12 @@
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             </p>
             <div class="extended-form">
-                <form action="#" method="post" class="get-a-quote-form">
-                    <input type="text" placeholder="Name (Required)" required>
-                    <input type="email" placeholder="Email (Required)" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea name="textarea" id="textarea" cols="30" rows="13" placeholder="Describe your project in detail..."></textarea>
-                    <button>
+                <form  class="get-a-quote-form">
+                    <input class="input-name" type="text" placeholder="Name (Required)" required value=""> 
+                    <input class="input-email" type="email" placeholder="Email (Required)" required value="">
+                    <input class="input-text" type="text" placeholder="Subject" value="">
+                    <textarea class="input-textarea" name="textarea" id="textarea" cols="30" rows="13" placeholder="Describe your project in detail..." value=""></textarea>
+                    <button class="submit-btn">
                         Submit
                     </button>
                 </form>
@@ -300,13 +337,13 @@
                     <div class="contact-list">
                         <img style="padding-right: 2px;" src="./assets/singolo3-phone.png" alt="">
                         <p>
-                            03528 331 86 35
+                            <a href="tel:03528 331 86 35">03528 331 86 35</a>
                         </p>
                     </div>
                     <div class="contact-list">
                         <img src="./assets/singolo3-mail.png" alt="">
                         <p>
-                            info@singolo.com
+                            <a href="mailto:info@singolo.com">info@singolo.com</a>
                         </p>
                     </div>
                 </div>
@@ -334,5 +371,6 @@
             </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

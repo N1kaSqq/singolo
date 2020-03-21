@@ -6,9 +6,16 @@
 }
 
 header {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
     height: 95px;
     background-color: #2d303a;
     border-bottom: 5px solid #323746;
+}
+
+.active2{
+    color: #f06c64;
 }
 
 .container {
@@ -58,10 +65,80 @@ a:hover{
 }
 
 .slider {
-    height: 600px;
+    position: relative;
+    padding-top: 95px;
+    height: 695px;
     background-color: #f06c64;
     border-bottom: 5px solid #ea676b;
+    transition: 1000ms;
 }
+
+.slider-blue {
+    border-bottom: 5px solid #3d029c;
+}
+
+.items-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 536px;
+}
+
+
+.item {
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    margin: 0 auto;
+    width: initial;
+}
+  
+.active,
+  .next {
+    display: block;
+}
+  
+.next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.to-left {
+    animation-name: left;
+  }
+  
+  .from-right {
+    animation-name: right;
+  }
+  
+  .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+  }
+  
+  .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+  }
+  
+  @keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+  
+  @keyframes right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
 
 .slider-box{
     height: 536px;
@@ -69,6 +146,104 @@ a:hover{
     margin: 0 auto;
     padding-top: 53px;
     display: flex;
+    opacity: 1;
+}
+
+.slider-box2{
+    height: 536px;
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 43px;
+    opacity: 1;
+}
+
+.slider2-iPhone-Vertical{
+    position: absolute;
+    width: 255px;
+    transform: translateX(273px);
+    z-index: 3;
+}
+
+.slider2-iPhone-mini-left{
+    position: absolute;
+    transform: translateX(142px) translateY(109px);
+    z-index: 2;
+}
+
+.slider2-iPhone-mini-right{
+    position: absolute;
+    transform: translateX(502px) translateY(109px);
+    z-index: 2;
+}
+
+.Home-button-Vertical{
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    transform: translateY(408px) translateX(87px);
+}
+
+.Home-button-Vertical:hover{
+    cursor: pointer;
+}
+
+
+.Home-button-Horizontal{
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    transform: translateY(86px) translateX( 7px);
+    z-index: 66;
+}
+
+.Home-button-Horizontal:hover{
+    cursor: pointer;
+}
+
+.Home-button-slider2{
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    transform: translateY(434px) translateX( 93px);
+}
+
+.Home-button-slider2:hover{
+    cursor: pointer;
+}
+
+.off-screen{
+    opacity: 0;
+    transition: 500ms !important;
+}
+
+.off-screen-Vertical{
+    position: absolute;
+    width: 190px;
+    height: 334px;
+    transform: translateY(65px) translateX(13px);
+    background-color: black;
+    
+}
+
+.off-screen-Horizontal{
+    position: absolute;
+    width: 334px;
+    height: 190px;
+    transform: translateY(13px) translateX(59px);
+    background-color: black;
+    
+}
+
+.off-screen-slider2{
+    position: absolute;
+    width: 201px;
+    height: 357px;
+    transform: translateY(68px) translateX(14px);
+    background-color: black;
+    z-index: 4;
 }
 
 .Horizontal{
@@ -76,25 +251,28 @@ a:hover{
     padding-top: 121px;
 }
 
-.chev{
-    background-image: url("./assets/chev.png");
-    cursor: pointer;
+.chev-box{
+    z-index: 60;
     position: absolute;
-    transform: translateY(228px) translateX(-70px);
-    width: 16px;
+    display: block;
+    width: 938px;
     height: 27px;
+    transform: translateY(280.5px) translateX(292px);
+}
+
+.chev1{
+    float: left;
     
 }
-
-.chev2 {
-    background-image: url("./assets/chev2.png");
-    position: absolute;
-    transform: translateY(108px) translateX(539px);
-    width: 16px;
-    height: 27px;
+.chev1:hover{
     cursor: pointer;
 }
-
+.chev2 {
+   float: right;
+}
+.chev2:hover{
+    cursor: pointer;
+}
 .services{
    background-color:#f2f2f2;
    height: 500px;
@@ -222,6 +400,11 @@ border-color: #dedede;
 cursor: pointer;
 }
 
+ul .active-portfolio{
+    color: #dedede;
+    border-color: #dedede;
+}
+
 .flexbox{
     width: 100%;
     display: flex;
@@ -234,6 +417,10 @@ cursor: pointer;
     margin-top: 20px;   
     width: 220px;
     height: 187px;
+    outline: 0px solid #F06C64;
+}
+.element:hover{
+    cursor: pointer;
 }
 .element:nth-child(n+13){
     display:none;
@@ -253,12 +440,12 @@ cursor: pointer;
     justify-content: space-between;
  }
 
- .item {
+ .item2 {
      height: 444px;
      width: 300px;
  }
 
- .item h2 {
+ .item2 h2 {
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
@@ -267,7 +454,7 @@ cursor: pointer;
     margin-top: 13px;
  }
 
- .item p{
+ .item2 p{
     margin-top: 11px;
     font-size: 12px;
     line-height: 22px;
@@ -430,6 +617,12 @@ textarea:focus {
     font-family: "Lato";
     font-weight: 400;
 }
+
+.contact-list p a {
+    text-decoration: none;
+    color: inherit;
+}
+
 footer{
     height: 76px;
     background-color: #2d303a;
