@@ -87,7 +87,18 @@ for (let e of portfolioElement){
 document.querySelector(".submit-btn").addEventListener("click",()=>{
 let inputText =  document.querySelector(".input-text").value;
 let inputTextarea =   document.querySelector(".input-textarea").value;
-if(document.querySelector(".input-name").value!=""&&document.querySelector(".input-email").value!=""){
+let emailarr = document.querySelector(".input-email").value.split("");
+function isEmailarrCorrect(emailarr){
+  let bool = false;
+  for(let i = 0; i<emailarr.length; i++){
+    if(emailarr[i]=="@"){
+      bool = true;
+    }
+  }
+  return bool;
+
+}
+if(document.querySelector(".input-name").value!=""&&document.querySelector(".input-email").value!=""&&isEmailarrCorrect(emailarr)){
   console.log(inputTextarea);
   console.log(inputText);
   if(inputTextarea!=""&&inputText!=""){
@@ -101,7 +112,7 @@ if(document.querySelector(".input-name").value!=""&&document.querySelector(".inp
     alert(
       `Письмо отправлено!
       Тема: ${inputText}
-      Описание: без опимания`
+      Описание: без опиcания`
     ); 
   } else if(inputTextarea!=""&&inputText=="") {
     alert(
