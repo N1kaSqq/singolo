@@ -7,6 +7,16 @@ for(let i=0; i<menu.length; i++){
     })
 }
 
+let popMenu = document.querySelectorAll(".pop-up-box-element");
+
+for(let i=0; i<popMenu.length; i++){
+  popMenu[i].addEventListener('click',()=>{
+    popMenu.forEach((e) =>{e.classList.remove('active2')});
+    popMenu[i].classList.add('active2');
+  })
+}
+
+
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
@@ -133,39 +143,64 @@ if(document.querySelector(".input-name").value!=""&&document.querySelector(".inp
 });
 document.querySelector("header").style.height="95px";
 
+let heightSlider = document.querySelector(".slider").offsetHeight;
+console.log(heightSlider);
+let heightServices = document.querySelector(".services").offsetHeight;
+console.log(heightSlider);
+let heightPortfolio = document.querySelector(".portfolio").offsetHeight;
+console.log(heightSlider);
+let heightAbout = document.querySelector(".About-us").offsetHeight;
+console.log(heightSlider);
+let heightContact = document.querySelector(".quote").offsetHeight;
+
+
+
+
 function changeHeader() {
   if(pageYOffset > 0){
     document.querySelector("header").style.height= "60px";
     document.querySelector("nav").style.height = "60px";
+    document.querySelector(".hamburger").style.top = "14px";
     document.querySelector("nav").style.paddingTop = "10px";
   } else {
     document.querySelector("header").style.height= "95px";
     document.querySelector("nav").style.height = "90px";
+    document.querySelector(".hamburger").style.top = "30px";
     document.querySelector("nav").style.paddingTop = "29px";
   }
-  if (pageYOffset >= 0 && pageYOffset < 620) {
+  if (pageYOffset >= 0 && pageYOffset < heightSlider) {
     menu.forEach((e) =>{e.classList.remove('active2')});
     document.querySelector("#homeLink").classList.add('active2');
+    popMenu.forEach((e) =>{e.classList.remove('active2')});
+    document.querySelector("#pop-home").classList.add('active2');
   }
 
-  if (pageYOffset > 620 && pageYOffset <= 1098) {
+  if (pageYOffset > heightSlider-5 && pageYOffset <= heightSlider + heightServices) {
     menu.forEach((e) =>{e.classList.remove('active2')});
     document.querySelector("#servicesLink").classList.add('active2');
+    popMenu.forEach((e) =>{e.classList.remove('active2')});
+    document.querySelector("#pop-services").classList.add('active2');
   }
 
-  if (pageYOffset > 1098 && pageYOffset <= 1968) {
+  if (pageYOffset > heightSlider + heightServices -5 && pageYOffset <= heightSlider + heightServices + heightPortfolio) {
     menu.forEach((e) =>{e.classList.remove('active2')});
     document.querySelector("#portfolioLink").classList.add('active2');
+    popMenu.forEach((e) =>{e.classList.remove('active2')});
+    document.querySelector("#pop-portfolio").classList.add('active2');
   }
 
-  if (pageYOffset > 2000 && pageYOffset <= 2700) {
+  if (pageYOffset > heightSlider + heightServices + heightPortfolio -5 && pageYOffset <= heightSlider + heightServices + heightPortfolio + heightAbout) {
     menu.forEach((e) =>{e.classList.remove('active2')});
     document.querySelector("#aboutLink").classList.add('active2');
+    popMenu.forEach((e) =>{e.classList.remove('active2')});
+    document.querySelector("#pop-about").classList.add('active2');
   }
 
-  if (pageYOffset > 2700) {
+  if (pageYOffset > heightSlider + heightServices + heightPortfolio + heightAbout -5) {
     menu.forEach((e) =>{e.classList.remove('active2')});
     document.querySelector("#contactLink").classList.add('active2');
+    popMenu.forEach((e) =>{e.classList.remove('active2')});
+    document.querySelector("#pop-contact").classList.add('active2');
   }
 }
 document.addEventListener("scroll", changeHeader);
@@ -308,3 +343,23 @@ const swipedetect = (el) => {
 
 var el = document.querySelector('.slider');
 swipedetect(el);
+
+
+document.body.style.overflow = "scroll";
+document.querySelector(".pop-up-box").style.transform = "translateX(-1000%)";
+document.querySelector(".hamburger").style.transform  = "translateX(20px)";
+
+
+
+document.querySelector(".hamburger").addEventListener('click',()=>{
+  if(document.querySelector(".hamburger").style.transform  == "translateX(20px)"){
+    document.querySelector(".hamburger").style.transform = "translateX(20px) rotate(90deg)";
+    document.querySelector(".pop-up-box").style.transform = "translateX(0%)";
+    document.body.style.overflow = "hidden";
+  } else {
+    document.querySelector(".hamburger").style.transform ="translateX(20px)";
+    document.querySelector(".pop-up-box").style.transform = "translateX(-1000%)";
+    document.body.style.overflow = "scroll";
+  }
+})
+
